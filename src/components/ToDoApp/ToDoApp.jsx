@@ -43,7 +43,7 @@ export const reducer = (state, action) => {
 };
 
 const ToDoApp = () => {
-    let Tasks = JSON.parse(localStorage.getItem('tasks')) || {}
+    let Tasks = JSON.parse(localStorage.getItem('tasks')) || []
     const [state, dispatch] = useReducer(reducer, { todos: Tasks || [] });
     const [status, setStatus] = useState("all");
     const { theme } = useContext(ThemeContext)
